@@ -15,8 +15,10 @@ class ClienteController extends Controller
     public function index()
     {
         //
-      
-        return view('cliente.clientes');
+        $carbon = new \Carbon\Carbon();
+        $date = $carbon->now();
+        $date = $date->format('Y');
+        return view('cliente.clientes')->with(['anioActual'=>$date]);
     }
 
     /**

@@ -79,6 +79,19 @@
         <main class="pt-5 badge-dark" style="padding-bottom:14em">
             @yield('content')
         </main>
+        
     </div>
 </body>
+<footer>
+    <main class="p-3 bg-white" >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    {{-- <span>{{date('d/m/Y', strtotime())}}</span> --}}
+                    <p>©  <span>{{$anioActual}}</span> - SIFC</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</footer>
 </html>

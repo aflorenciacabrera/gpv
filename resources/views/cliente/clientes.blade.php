@@ -16,8 +16,8 @@
 
             <label for=""><h3>Listado de Cientes</h3></label>
                 <hr class="border-dark">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
+                  <ul class="list-group list-group-flush ">
+                    <li class="list-group-item bg-light">An item</li>
                    
                   </ul>
         </div>
