@@ -75,7 +75,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="p-5 badge-dark" >
             @yield('content')
         </main>
     </div>
