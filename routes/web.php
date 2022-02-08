@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use Illuminate\Support\Facades\Auth;
 
-use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +22,21 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+// ****************************************** PUBLIC **************************************************
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+// ****************************************** ADMIN **************************************************
+
+// ****************************************** CLIENTE **************************************************
+Route::get('/clientes', 'ClienteController@index')->name('clientes');
+
+// ****************************************** PRODUCTO **************************************************
+Route::get('/productos', 'ProductoController@index')->name('productos');
+
+
+
