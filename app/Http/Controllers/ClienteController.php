@@ -18,7 +18,10 @@ class ClienteController extends Controller
         $carbon = new \Carbon\Carbon();
         $date = $carbon->now();
         $date = $date->format('Y');
-        return view('cliente.clientes')->with(['anioActual'=>$date]);
+
+        $clientes = cliente::all();
+
+        return view('cliente.clientes')->with(['clientes'=>$clientes]);
     }
 
     /**
@@ -29,6 +32,7 @@ class ClienteController extends Controller
     public function create()
     {
         //
+      
         return view('cliente.cliente_form');
 
     }
@@ -42,6 +46,16 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         //
+
+        $cliente = new cliente();
+        $cliente->nombre = $request->nombre;
+        $cliente->apellido = $request->apellido;
+        $cliente->telefono = $request->telefono;
+        $cliente->email = $request->email;
+        $cliente->direccion = $request->direccion; 
+        $cliente->save();
+
+        return view('cliente.clientes');
     }
 
     /**

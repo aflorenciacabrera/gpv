@@ -36,6 +36,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/clientes', 'ClienteController@index')->name('clientes');
 
 Route::get('/cliente/nuevo', 'ClienteController@create')->name('cliente.form');
+Route::post('/cliente/nuevo', 'ClienteController@store')->name('cliente.form');
 
 // ****************************************** PRODUCTO **************************************************
 Route::get('/productos', 'ProductoController@index')->name('productos');

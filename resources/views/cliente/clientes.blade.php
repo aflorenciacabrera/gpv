@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center badge-light border-dark shadow " style="border-radius: 15px;">
+    <div class="row justify-content-center badge-light border-dark shadow  m-2" style="border-radius: 15px;">
         <div class="col-md-12 p-3">
 
             {{-- <div class="card">
@@ -13,14 +13,47 @@
                    
                 </div>
             </div> --}}
-
-            <label for=""><h3>Listado de Cientes</h3></label>
-                <hr class="border-dark">
-                  <ul class="list-group list-group-flush ">
-                    <li class="list-group-item bg-light">An item</li>
-                   
-                  </ul>
+            <div class="row ">
+                <div class="col-8">
+                    <label for=""><h3>Listado de Cientes</h3></label>
+                </div>
+                <div class="col-4 text-right">
+                    <a type="button" href="{{route('cliente.form')}}" class="btn btn-outline-dark"><i class="fa fa-plus-square"></i> Nuevo</a>
+                </div>
+            </div>
+        
+            
+        </div>
+            <hr class="border-dark">
+        <div class="table-responsive">
+            <table class="table ">
+                <thead class="table-dark">
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre, Apellido</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Correo electrónico</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($clientes as $cliente)
+                        <tr>
+                            <th scope="row">{{$loop->index+1}}</th>
+                            <td >{{$cliente->nombre}} {{$cliente->apellido}}</td>
+                            <td>{{$cliente->telefono}}</td>
+                            <td>{{$cliente->email}}</td>
+                            <td>{{$cliente->direccion}}</td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
+
 @endsection

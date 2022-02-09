@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center badge-light shadow " style="border-radius: 15px;">
+    <div class="row justify-content-center badge-light shadow m-2" style="border-radius: 15px;">
         <div class="col-md-12 p-3">
             {{-- <div class="card">
                 <div class="card-header">
@@ -15,49 +15,34 @@
             <label for=""><h3>Formulario de Ciente</h3></label>
             
             <hr class="border-dark">
-            <form class="row g-3">
-                <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4">
+            <form  action="{{ route('cliente.form') }}" method="POST" class="form" id="form" enctype="multipart/form-data">
+              @csrf
+              <div class="form-row ">
+                <div class="form-group col-md-6">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="" name="nombre" required>
                 </div>
-                <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="inputPassword4">
+                <div class="form-group col-md-6">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="" name="apellido" required>
                 </div>
-                <div class="col-12">
-                  <label for="inputAddress" class="form-label">Address</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <div class=" form-group col-md-6">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="number" class="form-control" id="" placeholder="" name="telefono" >
                 </div>
-                <div class="col-12">
-                  <label for="inputAddress2" class="form-label">Address 2</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                <div class=" form-group col-md-6">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="" placeholder="" name="email" >
                 </div>
-                <div class="col-md-6">
-                  <label for="inputCity" class="form-label">City</label>
-                  <input type="text" class="form-control" id="inputCity">
+                <div class="form-group col-md-12">
+                  <label for="direccion" class="form-label">Dirección</label>
+                  <input type="text" class="form-control" id="" name="direccion" >
                 </div>
-                <div class="col-md-4">
-                  <label for="inputState" class="form-label">State</label>
-                  <select id="inputState" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
+               
+                <div class="form-group col-12">
+                  <button type="submit" class="btn btn-primary"> <i class="fa fa-save"></i> Guardar</button>
                 </div>
-                <div class="col-md-2">
-                  <label for="inputZip" class="form-label">Zip</label>
-                  <input type="text" class="form-control" id="inputZip">
-                </div>
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      Check me out
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Sign in</button>
-                </div>
+              </div>
               </form>
         </div>
     </div>

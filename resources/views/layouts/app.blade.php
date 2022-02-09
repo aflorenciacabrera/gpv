@@ -76,7 +76,7 @@
             </div>
         </nav>
 
-        <main class="pt-5 badge-dark" style="padding-bottom:14em">
+        <main class="pt-5  badge-dark" style="padding-bottom:10em">
             @yield('content')
         </main>
         
@@ -88,10 +88,20 @@
             <div class="row justify-content-center">
                 <div class="col-md-10 text-center">
                     {{-- <span>{{date('d/m/Y', strtotime())}}</span> --}}
-                    <p>©  <span>{{$anioActual}}</span> - SIFC</p>
+                    <p>© <span> 
+                            <script >
+                                var anio = new Date();
+                                document.write(anio.getFullYear());
+                            </script>
+                        </span> - SIFC
+                    </p>
+                    {{-- <div id=»reloj» style=»font-family: ‘DS-Digital’; width: 450px; background-color: black;font-size:100px;color: green ; text-align: center «></div> --}}
+                   
                 </div>
             </div>
         </div>
     </main>
 </footer>
 </html>
+
+
