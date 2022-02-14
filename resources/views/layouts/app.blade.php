@@ -76,7 +76,7 @@
             </div>
         </nav>
 
-        <main class="pt-5  badge-dark" style="padding-bottom:10em">
+        <main class="pt-5  badge-dark text-dark" style="padding-bottom:10em">
             @yield('content')
         </main>
         

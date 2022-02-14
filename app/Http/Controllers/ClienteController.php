@@ -55,7 +55,7 @@ class ClienteController extends Controller
         $cliente->direccion = $request->direccion; 
         $cliente->save();
 
-        return view('cliente.clientes');
+        return redirect()->route('clientes');
     }
 
     /**
