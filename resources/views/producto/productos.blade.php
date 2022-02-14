@@ -22,6 +22,7 @@
                             <thead class="table-dark">
                                 <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">Código</th>
                                 <th scope="col">Título</th>
                                 <th scope="col">Descripción</th>
                                 <th scope="col">Precio</th>
@@ -34,6 +35,7 @@
                                 @foreach ($productos as $producto)
                                     <tr>
                                         <th scope="row">{{$loop->index+1}}</th>
+                                        <td >{{$producto->codigo}} </td>
                                         <td >{{$producto->titulo}} </td>
                                         <td >{{$producto->descripcion}} </td>
                                         <td>{{$producto->precio}}</td>

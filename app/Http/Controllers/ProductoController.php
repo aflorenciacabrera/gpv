@@ -42,6 +42,7 @@ class ProductoController extends Controller
     {
         //
         $producto = new producto();
+        $producto->codigo = $request->codigo;
         $producto->titulo = $request->titulo;
         $producto->descripcion = $request->descripcion;
         $producto->precio = $request->precio;
