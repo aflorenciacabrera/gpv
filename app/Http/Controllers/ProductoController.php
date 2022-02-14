@@ -16,7 +16,9 @@ class ProductoController extends Controller
     {
         //
        
-        return view('producto.productos');
+        $productos = producto::all();
+
+        return view('producto.productos')->with(['productos'=>$productos]);
     }
 
     /**
@@ -27,6 +29,7 @@ class ProductoController extends Controller
     public function create()
     {
         //
+        return view('producto.producto_form');
     }
 
     /**
@@ -38,6 +41,17 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
         //
+        $producto = new producto();
+        $producto->titulo = $request->titulo;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio = $request->precio;
+        $producto->cantidad = $request->cantidad;
+        $producto->observaciones = $request->observaciones; 
+        $producto->save();
+
+        return redirect()->route('productos');
+
+
     }
 
     /**

@@ -38,8 +38,10 @@
                                         <td>{{$cliente->email}}</td>
                                         <td>{{$cliente->direccion}}</td>
                                         <td>
-                                            <a type="button" href="{{route('cliente.form')}}" class="btn btn-light"><i class="fa fa-plus-square"></i> </a>
-                                            <a type="button" href="{{route('cliente.form')}}" class="btn btn-light"><i class="fa fa-plus-square"></i> </a>
+                                            
+                                            <a type="button" href="{{route('cliente.form')}}" class="btn btn-light"><i class="fa fa-edit"></i> </a>
+
+                                            <a type="button" href="{{route('cliente.form')}}" class="btn btn-light"> <i class="fa fa-trash-o"></i> </a>
                                         </td>
                                     </tr>
                                 @endforeach
