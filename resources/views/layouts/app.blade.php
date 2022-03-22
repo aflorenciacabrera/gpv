@@ -69,15 +69,7 @@
                                         @csrf
                                     </form>
                                 </div>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                              document.getElementById('logout-form').submit();">
-                                 {{ __('Logout') }}
-                             </a>
-
-                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                 @csrf
-                             </form>
+                              
                             </li>
                         @endguest
                     </ul>
@@ -98,10 +90,10 @@
                 <div class="col-md-10 text-center">
                     {{-- <span>{{date('d/m/Y', strtotime())}}</span> --}}
                     <p>© <span> 
-                            <script >
+                            {{-- <script >
                                 var anio = new Date();
                                 document.write(anio.getFullYear());
-                            </script>
+                            </script> --}}
                         </span> - SIFC
                     </p>
                     {{-- <div id=»reloj» style=»font-family: ‘DS-Digital’; width: 450px; background-color: black;font-size:100px;color: green ; text-align: center «></div> --}}
