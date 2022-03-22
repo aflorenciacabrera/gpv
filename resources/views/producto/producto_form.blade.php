@@ -19,9 +19,9 @@
                   <label for="nombre" class="form-label">Titulo</label>
                   <input type="text" class="form-control" id="" name="titulo" required>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="apellido" class="form-label">Descripción</label>
-                  <input type="text" class="form-control" id="" name="descripcion" required>
+                <div class=" form-group col-md-6">
+                  <label for="email" class="form-label">Código</label>
+                  <input type="number" class="form-control" id="" placeholder="" name="codigo" >
                 </div>
                 <div class=" form-group col-md-6">
                   <label for="telefono" class="form-label">Precio</label>
@@ -32,10 +32,14 @@
                   <input type="number" class="form-control" id="" placeholder="" name="cantidad" >
                 </div>
                 <div class="form-group col-md-12">
+                  <label for="apellido" class="form-label">Descripción</label>
+                  <textarea type="text" class="form-control" id="" name="descripcion" required></textarea>
+                </div>
+                <div class="form-group col-md-12">
                   <label for="direccion" class="form-label">Observaciones</label>
                   <input type="text" class="form-control" id="" name="observaciones" >
                 </div>
-               
+                
                 <div class="form-group col-12">
                   <button type="submit" class="btn btn-primary"> <i class="fa fa-save"></i> Guardar</button>
                 </div>

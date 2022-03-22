@@ -45,3 +45,8 @@ Route::get('/producto/nuevo', 'ProductoController@create')->name('producto.form'
 Route::post('/producto/nuevo', 'ProductoController@store')->name('producto.form');
 
 
+Route::get('/pedidos', 'ClienteController@index')->name('pedidos');
+
+
+Route::get('/administracion', 'ClienteController@index')->name('admin');
+

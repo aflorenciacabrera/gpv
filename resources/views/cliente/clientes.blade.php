@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <hr class="border-dark">
                     <div class="table-responsive">
-                        <table class="table ">
+                        <table class="table table-bordered">
                             <thead class="table-dark">
                                 <tr>
                                 <th scope="col">#</th>
@@ -39,9 +39,9 @@
                                         <td>{{$cliente->direccion}}</td>
                                         <td>
                                             
-                                            <a type="button" href="{{route('cliente.form')}}" class="btn btn-light"><i class="fa fa-edit"></i> </a>
+                                            <a type="button" href="{{route('cliente.form')}}" class="btn btn-lg btn-light"><i class="fa  fa-edit"></i> </a>
 
-                                            <a type="button" href="{{route('cliente.form')}}" class="btn btn-light"> <i class="fa fa-trash-o"></i> </a>
+                                            <a type="button" href="{{route('cliente.form')}}" class="btn btn-lg btn-light"> <i class="fa  fa-trash-o"></i> </a>
                                         </td>
                                     </tr>
                                 @endforeach

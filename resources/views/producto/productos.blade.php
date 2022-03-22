@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <hr class="border-dark">
                     <div class="table-responsive">
-                        <table class="table ">
+                        <table class="table table-bordered">
                             <thead class="table-dark">
                                 <tr>
                                 <th scope="col">#</th>
@@ -43,9 +43,9 @@
                                         <td>{{$producto->observaciones}}</td>
                                         <td>
                                             
-                                            <a type="button" href="{{route('producto.form')}}" class="btn btn-light"><i class="fa fa-edit"></i> </a>
+                                            <a type="button" href="{{route('producto.form')}}" class="btn  btn-outline-primary"><i class="fa fa-edit"></i> </a>
 
-                                            <a type="button" href="{{route('producto.form')}}" class="btn btn-light"> <i class="fa fa-trash-o"></i> </a>
+                                            <a type="button" href="{{route('producto.form')}}" class="btn  btn-outline-danger"> <i class="fa fa-trash-o"></i> </a>
                                         </td>
                                     </tr>
                                 @endforeach
