@@ -19,7 +19,7 @@ class CreateProductosTable extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->string('precio')->nullable();
-            $table->string('cantidad')->nullable();
+            // $table->string('cantidad')->nullable();
             $table->string('observaciones')->nullable();
             $table->timestamps();
         });
