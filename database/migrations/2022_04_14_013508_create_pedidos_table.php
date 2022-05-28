@@ -19,6 +19,8 @@ class CreatePedidosTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->date('fecha_entrega');
+            $table->unsignedBigInteger('cliente_id');
+            $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
             // $table->integer('user_id');
             $table->string('entregado');
             $table->string('pagado');

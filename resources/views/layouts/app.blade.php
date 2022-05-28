@@ -77,14 +77,14 @@
             </div>
         </nav>
 
-        <main class="pt-5  badge-dark text-dark" style="padding-bottom:10em">
+        <main class="pt-5  " style="padding-bottom:10em; background-color:rgba(241, 229, 161, 0.411)">
             @yield('content')
         </main>
         
     </div>
 </body>
-<footer>
-    <main class="p-3 bg-white" >
+<footer style=" background-color:rgb(100, 98, 98)">
+    <main class="p-3 text-white" >
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 text-center">
