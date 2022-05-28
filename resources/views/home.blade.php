@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container pt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow">
-                <div class="card-header text-center">{{ __('MENU') }}</div>
+                {{-- <div class="card-header text-center">{{ __('MENU') }}</div> --}}
 
                 <div class="card-body">
                     @if (session('status'))
@@ -21,7 +21,7 @@
                     <div class="card-deck">
                        
                             <div class="card shadow">
-                                <a href="{{route('productos')}}" target="_blank"  type="button" class="btn btn-outline-primary">
+                                <a href="{{route('productos')}}" target="_blank"  type="button" class="btn btn-dark">
                             {{-- <img src="..." class="card-img-top" alt="..."> --}}
                                     <div class="card-body text-center">
                                         <h5 class="card-title">PRODUCTOS</h5>
@@ -32,7 +32,7 @@
                             </div>
                       
                         <div class="card shadow">
-                            <a href="{{route('clientes')}}" target="_blank"  type="button" class="btn btn-outline-danger">
+                            <a href="{{route('clientes')}}" target="_blank"  type="button" class="btn btn-dark">
                           {{-- <img src="..." class="card-img-top" alt="..."> --}}
                           <div class="card-body text-center">
                             <h5 class="card-title">CLIENTES</h5>
@@ -45,7 +45,7 @@
                       <br>
                       <div class="card-deck">
                         <div class="card shadow">
-                            <a href="{{route('pedidos')}}" target="_blank"  type="button" class="btn btn-outline-success">
+                            <a href="{{route('pedidos')}}" target="_blank"  type="button" class="btn btn-dark">
                           {{-- <img src="..." class="card-img-top" alt="..."> --}}
                           <div class="card-body text-center">
                             <h5 class="card-title">PEDIDOS</h5>
@@ -56,7 +56,7 @@
                         </a>       
                         </div>
                         <div class="card shadow">
-                            <a href="{{route('admin')}}" target="_blank"  type="button" class="btn btn-outline-dark">
+                            <a href="{{route('admin')}}" target="_blank"  type="button" class="btn btn-dark">
                           {{-- <img src="..." class="card-img-top" alt="..."> --}}
                           <div class="card-body text-center">
                             <h5 class="card-title">ADMINISTRACIÓN</h5>
